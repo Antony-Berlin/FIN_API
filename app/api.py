@@ -101,6 +101,10 @@ class ChatRequest(BaseModel):
     contents: list
 
 name = []
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
+
 @app.get("/test/")
 async def test():
     return {"test":"ok"}
